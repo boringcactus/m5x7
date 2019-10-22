@@ -1,0 +1,27 @@
+[package]
+name = "m5x7"
+version = "1.0.0"
+authors = ["Melody Horn <melody@boringcactus.com>"]
+description = "Daniel Linssen's m5x7 font"
+license = "CC0-1.0"
+repository = "https://github.com/boringcactus/m5x7"
+readme = "README.md"
+keywords = ["font"]
+categories = ["graphics"]
+edition = "2018"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = []
+
+parsed = ["rusttype", "lazy_static"]
+
+[dependencies]
+rusttype = { version = "^0.8.1", optional = true }
+lazy_static = { version = "^1.4.0", optional = true }
+
+[dev-dependencies]
+rusttype = "0.8.1"
+piston2d-opengl_graphics = "0.70.0"
